@@ -7,6 +7,8 @@ namespace Parking_problem
         public int Hours { get; set; }
 
         public double Charges = 2;
+
+        public double maxCharges = 10;
         
         public string Name { get; set; }
         
@@ -22,8 +24,8 @@ namespace Parking_problem
                 return Charges;
             if (Hours == 24)
             {
-                Charges = 10;
-                return Charges;
+                Charges = maxCharges;
+                return maxCharges;
             }
             Charges += 0.5 * Hours;
             return Charges;
